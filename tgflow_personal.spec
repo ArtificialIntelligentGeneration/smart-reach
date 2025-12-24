@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 from PyInstaller.utils.hooks import collect_submodules
 
-# Используем текущий каталог сборки как патч
+# Personal build of the app with bundled user data
 
 # Определяем иконку для сборки
 def find_icon():
@@ -40,6 +40,13 @@ a = Analysis(
     binaries=[],
     datas=[
         ('templates', 'templates'),
+        # Do NOT bundle user data or sessions by default
+        # ('scripts', 'scripts'),
+        # ('sessions', 'sessions'),
+        # ('broadcast_logs', 'broadcast_logs'),
+        # ('accounts.json', '.'),
+        # ('settings.ini', '.'),
+        # ('auth.log', '.'),
     ],
     hiddenimports=hiddenimports,
     hookspath=[],
@@ -59,7 +66,7 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name='SLAVA',
+    name='TGFlow',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -77,13 +84,13 @@ coll = COLLECT(
     strip=False,
     upx=False,
     upx_exclude=[],
-    name='SLAVA',
+    name='TGFlow',
 )
 
 # Final macOS bundle – creates a proper .app with Contents/Info.plist
 app = BUNDLE(
     coll,
-    name='SLAVA.app',
+    name='TGFlow.app',
     icon=app_icon,
-    bundle_identifier='com.aig.slava',
+    bundle_identifier='com.aig.tgflow',
 ) 

@@ -1,4 +1,4 @@
-# RFC-001: Архитектура MySLAVA v2
+# RFC-001: Архитектура TGFlow v2
 
 - Тип: RFC
 - Статус: Draft (D1)
@@ -42,7 +42,7 @@ Desktop-приложение (PyQt6 + Pyrogram) имеет рассылку (Bro
 
 1) Логин
    - Desktop отправляет `POST /auth/login {email,password,device_fingerprint}`.
-   - Ответ: `{token,user,exp}`. Токен хранится локально: `~/.myslava/license.json`.
+   - Ответ: `{token,user,exp}`. Токен хранится локально: `~/.TGFlow/license.json`.
 
 2) Проверка лицензии
    - `GET /license` возвращает `{plan,status,quota,device_binding}`.
@@ -67,7 +67,7 @@ Desktop-приложение (PyQt6 + Pyrogram) имеет рассылку (Bro
 ## Конфиг Desktop
 
 - `settings.ini`: `api_base_url`, `jwt_public_key_fingerprint`, `flood.max_consecutive_errors`, `flood.cooldown_sec`, `anti_spam.enabled`.
-- Хранение токена: `~/.myslava/license.json` (региональная директория OS), шифрование возможностями ОС.
+- Хранение токена: `~/.TGFlow/license.json` (региональная директория OS), шифрование возможностями ОС.
 
 ## Логирование и телеметрия
 
