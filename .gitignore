@@ -1,0 +1,47 @@
+# Python & Environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+.venv/
+.venv310/
+
+# Configuration & Secrets
+settings.ini
+accounts.json
+license.json
+*.env
+.env
+auth.log
+
+# User Data & Logs
+sessions/
+broadcast_logs/
+scripts/
+*.log
+*.sqlite
+*.db
+
+# IDE & OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
