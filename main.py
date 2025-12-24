@@ -1652,7 +1652,7 @@ class OptimizedBroadcastWorker(QThread):
 class TelegramApp(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Telegram Sender")
+        self.setWindowTitle("TGFlow - Telegram Outreach")
         # Флаг, предотвращающий конкурентные попытки авторизации
         self.is_auth_in_progress = False
 
@@ -3791,7 +3791,8 @@ class ChatPickerDialog(QDialog):
 
     def setup_about_tab(self):
         layout = QVBoxLayout(self.about_tab)
-        lbl = QLabel('<h3>SLAVA AiG</h3>')
+        # Заголовок
+        lbl = QLabel('<h3>TGFlow</h3>')
         lbl.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(lbl)
 

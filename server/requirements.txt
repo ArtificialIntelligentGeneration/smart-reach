@@ -5,6 +5,7 @@ psycopg2-binary==2.9.9
 alembic==1.13.2
 pydantic==2.8.2
 PyJWT==2.9.0
+cryptography>=42.0.0
 passlib[bcrypt]==1.7.4
 redis==5.0.8
 prometheus-client==0.20.0

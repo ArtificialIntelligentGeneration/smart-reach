@@ -20,7 +20,7 @@ class LicenseAPIError(Exception):
 
 
 class LicenseClient:
-    """Client for SLAVA Licensing API"""
+    """Client for TGFlow Licensing API"""
 
     def __init__(self, base_url: str, timeout: int = 10, jwks_url: Optional[str] = None):
         self.base_url = base_url.rstrip('/')

@@ -26,7 +26,7 @@ def configure_logging() -> None:
 
 def create_app() -> FastAPI:
     settings = get_settings()
-    app = FastAPI(title="SLAVA Licensing API", version="0.1.0")
+    app = FastAPI(title="TGFlow Licensing API", version="0.1.0")
 
     @app.middleware("http")
     async def metrics_middleware(request: Request, call_next):

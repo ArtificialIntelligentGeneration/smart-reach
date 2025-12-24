@@ -1,6 +1,6 @@
-# SmartReach: High-Load Telegram Outreach Automation
+# TGFlow: High-Load Telegram Outreach Automation
 
-**SmartReach** is an advanced, asynchronous Python application designed for managing large-scale outreach campaigns on Telegram. It leverages the MTProto protocol (via Pyrogram) to handle multiple accounts simultaneously with high performance and human-like behavior simulation.
+**TGFlow** is an advanced, asynchronous Python application designed for managing large-scale outreach campaigns on Telegram. It leverages the MTProto protocol (via Pyrogram) to handle multiple accounts simultaneously with high performance and human-like behavior simulation.
 
 > **Note:** This project demonstrates advanced usage of `asyncio`, `PyQt6`, and anti-flood algorithms. It is intended for educational purposes and as a portfolio showcase of automation capabilities.
 
@@ -29,7 +29,7 @@
 ## 🏗 Architecture Highlights
 
 ### The Anti-Flood System (`antispam_manager.py`)
-One of the most complex parts of Telegram automation is avoiding bans. SmartReach implements a multi-layer protection system:
+One of the most complex parts of Telegram automation is avoiding bans. TGFlow implements a multi-layer protection system:
 1.  **Token Bucket Algorithm**: Controls the rate of outgoing requests.
 2.  **Adaptive Backoff**: If an account hits a `FloodWait` error, the system automatically parses the required wait time, pauses the account, and re-schedules the task.
 3.  **SpamBot Integration**: (Optional) Automated interaction with `@SpamBot` to check account status and appeal restrictions.
@@ -67,9 +67,9 @@ The application treats accounts as resources in a pool. When a broadcasting camp
 ## 🔒 Configuration
 
 The application stores user data (sessions, logs) in the standard OS user data directory:
-*   **Windows**: `%APPDATA%\SLAVA`
-*   **macOS**: `~/Library/Application Support/SLAVA`
-*   **Linux**: `~/.local/share/SLAVA`
+*   **Windows**: `%APPDATA%\TGFlow`
+*   **macOS**: `~/Library/Application Support/TGFlow`
+*   **Linux**: `~/.local/share/TGFlow`
 
 To add accounts, you will need your `api_id` and `api_hash` from [my.telegram.org](https://my.telegram.org).
 

@@ -12,7 +12,7 @@ def find_icon():
     """Находит подходящую иконку для текущей платформы."""
     icon_candidates = [
         'icon.icns',  # ICNS файл (предпочтительно для macOS)
-        '28538791-c5e2-4ec8-9091-498b7e3e2ebd-_1_.ico',  # основная ICO
+        'app_icon.ico',  # основная ICO
         'resources/icon.icns',  # ICNS для macOS (предпочтительно)
         'resources/icon.ico',   # ICO в resources
         'resources/icon.png',   # PNG как fallback

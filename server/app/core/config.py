@@ -27,7 +27,7 @@ class Settings:
     DATABASE_URL: str = os.getenv(
         "DATABASE_URL",
         # Local default: peer auth, unix socket
-        "postgresql+psycopg2:///slava_licensing",
+        return "postgresql+psycopg2:///tgflow_licensing"
     )
 
     # Redis (rate limiting)
@@ -41,7 +41,7 @@ class Settings:
         "JWT_PUBLIC_KEY_PATH", str(BASE_DIR / "keys" / "jwtRS256.key.pub")
     )
     JWT_EXPIRE_MINUTES: int = int(os.getenv("JWT_EXPIRE_MINUTES", "10080"))  # 7 days
-    JWT_ISSUER: str = os.getenv("JWT_ISSUER", "slava-licensing")
+    JWT_ISSUER: str = os.getenv("JWT_ISSUER", "tgflow-licensing")
 
     # Business params
     RESERVATION_TTL_MINUTES: int = int(os.getenv("RESERVATION_TTL_MINUTES", "15"))
