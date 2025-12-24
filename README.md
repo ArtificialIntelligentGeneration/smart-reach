@@ -44,8 +44,8 @@ The application treats accounts as resources in a pool. When a broadcasting camp
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/ArtificialIntelligentGeneration/smart-reach.git
-    cd smart-reach
+    git clone https://github.com/ArtificialIntelligentGeneration/tgflow.git
+    cd tgflow
     ```
 
 2.  **Create a virtual environment:**
