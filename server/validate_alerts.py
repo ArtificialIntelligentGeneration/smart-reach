@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Alert Configuration Validator for SLAVA Licensing API
+Alert Configuration Validator for TGFlow Licensing API
 """
 import yaml
 import os
@@ -9,7 +9,7 @@ from typing import Dict, List, Any
 
 def load_alerts_config() -> Dict[str, Any]:
     """Load and parse alerts.yml configuration"""
-    alerts_file = "/Users/iiii/Documents/(AiG) Artificial intelligent Generation /Разработка/tg sender/SLAVA/SLAVA App 2.0/server/alerts.yml"
+    alerts_file = "/Users/iiii/Documents/(AiG) Artificial intelligent Generation /Разработка/tg sender/TGFlow/TGFlow App 2.0/server/alerts.yml"
 
     if not os.path.exists(alerts_file):
         print(f"❌ Alerts file not found: {alerts_file}")
@@ -125,7 +125,7 @@ def analyze_alert_coverage(alert_config: Dict[str, Any]) -> Dict[str, Any]:
     return analysis
 
 def main():
-    print("🚨 SLAVA Licensing API - Alert Configuration Validator")
+    print("🚨 TGFlow Licensing API - Alert Configuration Validator")
     print("=" * 60)
 
     # Load configuration

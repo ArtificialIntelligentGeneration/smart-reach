@@ -41,8 +41,8 @@ jobs:
           validate_v3_spec(spec)
           print('OpenAPI valid')
           PY
-      - name: Docker build
-        run: |
-          docker build -f server/Dockerfile -t slava-lic-api:ci ./server
+    - name: Build Docker Image
+      run: |
+        docker build -f server/Dockerfile -t tgflow-lic-api:ci ./server
 
 

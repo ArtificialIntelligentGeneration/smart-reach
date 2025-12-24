@@ -191,10 +191,11 @@ components:
 
 openapi: 3.0.3
 info:
-  title: MySLAVA Licensing & Usage API
+  title: TGFlow Licensing & Usage API
   version: 0.1.0
 servers:
-  - url: https://api.dev.myslava.local
+  - url: https://api.dev.tgflow.local
+    description: Local development server
 paths:
   /auth/login:
     post:

@@ -1,5 +1,5 @@
 groups:
-  - name: slava_licensing_alerts
+  - name: tgflow_licensing_alerts
     rules:
       # 5xx Error Rate Alert
       - alert: High5xxErrorRate
@@ -7,11 +7,11 @@ groups:
         for: 5m
         labels:
           severity: critical
-          service: slava-licensing-api
+          service: tgflow-licensing-api
         annotations:
           summary: "High 5xx error rate detected"
           description: "5xx error rate is {{ $value | printf \"%.2f\" }} (threshold: 0.05)"
-          runbook_url: "https://github.com/your-org/slava-licensing/wiki/5xx-errors"
+          runbook_url: "https://github.com/your-org/tgflow-licensing/wiki/5xx-errors"
 
       # High Latency Alert
       - alert: HighRequestLatency
@@ -19,23 +19,23 @@ groups:
         for: 5m
         labels:
           severity: warning
-          service: slava-licensing-api
+          service: tgflow-licensing-api
         annotations:
           summary: "High request latency detected"
           description: "95th percentile latency is {{ $value | printf \"%.2f\" }}s (threshold: 2.0s)"
-          runbook_url: "https://github.com/your-org/slava-licensing/wiki/high-latency"
+          runbook_url: "https://github.com/your-org/tgflow-licensing/wiki/high-latency"
 
       # Database Connection Issues
       - alert: DatabaseConnectionError
-        expr: up{job="slava-licensing-api", instance=~".*"} == 0
+        expr: up{job="tgflow-licensing-api", instance=~".*"} == 0
         for: 2m
         labels:
           severity: critical
-          service: slava-licensing-api
+          service: tgflow-licensing-api
         annotations:
           summary: "Database connection lost"
-          description: "SLAVA Licensing API cannot connect to database"
-          runbook_url: "https://github.com/your-org/slava-licensing/wiki/database-issues"
+          description: "TGFlow Licensing API cannot connect to database"
+          runbook_url: "https://github.com/your-org/tgflow-licensing/wiki/database-issues"
 
       # Rate Limiting Triggered
       - alert: RateLimitExceeded
@@ -43,11 +43,11 @@ groups:
         for: 3m
         labels:
           severity: warning
-          service: slava-licensing-api
+          service: tgflow-licensing-api
         annotations:
           summary: "Rate limiting triggered frequently"
           description: "429 responses rate: {{ $value | printf \"%.1f\" }}/min"
-          runbook_url: "https://github.com/your-org/slava-licensing/wiki/rate-limiting"
+          runbook_url: "https://github.com/your-org/tgflow-licensing/wiki/rate-limiting"
 
       # Memory Usage Alert
       - alert: HighMemoryUsage
@@ -55,7 +55,7 @@ groups:
         for: 5m
         labels:
           severity: warning
-          service: slava-licensing-api
+          service: tgflow-licensing-api
         annotations:
           summary: "High memory usage detected"
           description: "Memory usage is {{ $value | printf \"%.1f\" }}% (threshold: 85%)"
@@ -66,7 +66,7 @@ groups:
         for: 5m
         labels:
           severity: critical
-          service: slava-licensing-api
+          service: tgflow-licensing-api
         annotations:
           summary: "Low disk space"
           description: "Disk space available: {{ $value | printf \"%.1f\" }}% (threshold: 10%)"
@@ -77,7 +77,7 @@ groups:
         for: 3m
         labels:
           severity: critical
-          service: slava-licensing-api
+          service: tgflow-licensing-api
           endpoint: "/license"
         annotations:
           summary: "License endpoint failing"
@@ -88,7 +88,7 @@ groups:
         for: 5m
         labels:
           severity: warning
-          service: slava-licensing-api
+          service: tgflow-licensing-api
           endpoint: "/usage/reserve"
         annotations:
           summary: "Usage reserve endpoint slow"
@@ -99,7 +99,7 @@ groups:
         for: 3m
         labels:
           severity: critical
-          service: slava-licensing-api
+          service: tgflow-licensing-api
           endpoint: "/usage/commit"
         annotations:
           summary: "Usage commit endpoint failing"

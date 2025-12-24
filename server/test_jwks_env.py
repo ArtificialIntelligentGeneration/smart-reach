@@ -6,7 +6,7 @@ import os
 import sys
 
 # Add server path
-server_path = '/Users/iiii/Documents/(AiG) Artificial intelligent Generation /Разработка/tg sender/SLAVA/SLAVA App 2.0/server'
+server_path = '/Users/iiii/Documents/(AiG) Artificial intelligent Generation /Разработка/tg sender/TGFlow/TGFlow App 2.0/server'
 sys.path.insert(0, server_path)
 
 def test_jwks_environment(env_name, expected_format):

@@ -1,4 +1,4 @@
-SLAVA Licensing API (Stage 2)
+# TGFlow Licensing API (Stage 2)
 
 Quick start (local)
 

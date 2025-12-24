@@ -58,7 +58,7 @@ nest_asyncio.apply()
 
 # ─── Настройка рабочей директории ────────────────────────────────────────────
 # Все файлы, которые приложение создаёт (auth.log, accounts.json, sessions …)
-# теперь хранятся в каталоге `~/Library/Application Support/SLAVA` (macOS)
+# теперь хранятся в каталоге `~/Library/Application Support/TGFlow` (macOS)
 # или аналогичном для других ОС. Переключаем `cwd`, чтобы существующий код
 # с относительными путями продолжал работать без больших изменений.
 os.chdir(USER_DATA_DIR)
@@ -4489,9 +4489,9 @@ def cleanup_temp_files():
 
 # --- Debug helper ---
 def _dbg(msg: str):
-    """Append diagnostic line to ~/Desktop/myslava_debug.log (best-effort)."""
+    """Append diagnostic line to ~/Desktop/tgflow_debug.log (best-effort)."""
     try:
-        log_path = pathlib.Path.home() / 'Desktop' / 'myslava_debug.log'
+        log_path = pathlib.Path.home() / 'Desktop' / 'tgflow_debug.log'
         log_path.parent.mkdir(parents=True, exist_ok=True)
         with log_path.open('a', encoding='utf-8') as _f:
             ts = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
