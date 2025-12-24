@@ -44,7 +44,7 @@ The application treats accounts as resources in a pool. When a broadcasting camp
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/aig-business/smart-reach.git
+    git clone https://github.com/ArtificialIntelligentGeneration/smart-reach.git
     cd smart-reach
     ```
 
@@ -79,4 +79,4 @@ This code is provided for portfolio demonstration purposes.
 Copyright © 2025. All Rights Reserved.
 
 ---
-*Built with ❤️ by AIG Business - Python & AI Automation Engineer*
+*Built with ❤️ by AiGen - Python & AI Automation Engineer*
